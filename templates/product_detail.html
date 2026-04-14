@@ -127,7 +127,7 @@
         <div class="col-md-6">
             <div class="ratio ratio-1x1 bg-light rounded-4 mb-3">
                 <img id="mainImage" 
-                     src="https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/{{ main_image if main_image else (images[0].filename if images else '') }}" 
+                     src="https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/{{ main_image if main_image else (images[0].filename if images else '') }}" 
                      alt="{{ p.name }}" 
                      class="main-img p-3 rounded-4"
                      style="cursor:zoom-in">
@@ -137,7 +137,7 @@
             <div class="gallery-thumbs">
                 {% for im in images %}
                 <button class="thumb {% if loop.first %}active{% endif %}" onclick="changeImage({{ loop.index0 }})">
-                    <img src="https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/{{ im.filename }}" alt="صورة">
+                    <img src="https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/{{ im.filename }}" alt="صورة">
                 </button>
                 {% endfor %}
             </div>
@@ -240,10 +240,10 @@ let productName = "{{ p.name|replace('"', '\\"')|safe }}";
 // الصور
 let imagesList = [];
 {% if main_image %}
-imagesList.push("https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/{{ main_image }}");
+imagesList.push("https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/{{ main_image }}");
 {% endif %}
 {% for im in images %}
-imagesList.push("https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/{{ im.filename }}");
+imagesList.push("https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/{{ im.filename }}");
 {% endfor %}
 if (imagesList.length === 0) {
     imagesList.push("https://placehold.co/400x400/1976d2/white?text=صورة");

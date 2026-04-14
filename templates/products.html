@@ -844,7 +844,7 @@
         const discount = p.old_price ? Math.round(((p.old_price - p.price) / p.old_price) * 100) : 0;
         const discountBadge = discount > 0 ? `<span class="discount-badge">🔥 -${discount}%</span>` : '';
         const formattedPrice = p.price.toLocaleString();
-        const imageUrl = p.image ? `https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/${p.image}` : null;
+        const imageUrl = p.image ? `https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/${p.image}` : null;
         const bulkDiscountsHtml = p.bulk_discounts ? renderBulkDiscountInfo(p.bulk_discounts) : '';
         
         return `
@@ -1165,12 +1165,12 @@
       const images = [];
       
       if (product.image) {
-        images.push(`https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/${product.image}`);
+        images.push(`https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/${product.image}`);
       }
       
       if (product.extra_images && product.extra_images.length > 0) {
         for (let i = 0; i < product.extra_images.length; i++) {
-          images.push(`https://elxnymtwlducydvnjkth.supabase.co/storage/v1/object/public/products/${product.extra_images[i]}`);
+          images.push(`https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/${product.extra_images[i]}`);
         }
       }
       
