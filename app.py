@@ -28,7 +28,8 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=30)
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
 # ========== إعداد Supabase Storage ==========
-SUPABASE_URL = os.environ.get('SUPABASE_URL', 'https://elxnymtwlducydvnjkth.supabase.co')
+# تم استبدال رابط Supabase القديم بالجديد
+SUPABASE_URL = os.environ.get('SUPABASE_URL', 'https://iiwktxwlorknefbkztvt.supabase.co')
 SUPABASE_KEY = os.environ.get('SUPABASE_KEY')
 supabase = None
 if SUPABASE_AVAILABLE and SUPABASE_URL and SUPABASE_KEY:
