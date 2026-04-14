@@ -10,7 +10,7 @@
     <style>
         * { font-family: 'Noto Kufi Arabic', sans-serif; }
         
-        /* شريط العبارة المتحرك */
+        /* شريط العبارة المتحرك - حركة من اليسار إلى اليمين */
         .marquee-container {
             background: linear-gradient(135deg, #1976d2, #1565c0);
             overflow: hidden;
@@ -23,7 +23,7 @@
         
         .marquee-content {
             display: inline-block;
-            animation: marquee 35s linear infinite;
+            animation: marquee 50s linear infinite;
             font-weight: bold;
             font-size: 1.1rem;
             color: white;
@@ -37,8 +37,8 @@
         }
         
         @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .product-card {
@@ -849,7 +849,7 @@
         
         return `
           <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl fade-up fade-up-d${(idx % 4) + 1} cursor-pointer" onclick="openProductModal(${p.id})">
-            <div class="relative bg-gradient-to-br from-gray-50 to-gray-100 h-36 md:h-44 flex items-center justify-center">
+            <div class="relative bg-gradient-to-br from-gray-50 to-gray-100 h-44 md:h-52 flex items-center justify-center">
               ${imageUrl ? `<img src="${imageUrl}" class="w-full h-full object-cover" alt="${p.name.replace(/'/g, "\\'")}">` : `<span class="text-5xl md:text-6xl drop-shadow-sm">📦</span>`}
               ${discountBadge}
               <span class="product-category-badge" style="position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.6); color: white; padding: 2px 8px; border-radius: 20px; font-size: 10px;">${p.category || 'عام'}</span>
