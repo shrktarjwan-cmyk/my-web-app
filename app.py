@@ -40,9 +40,9 @@ if SUPABASE_AVAILABLE and SUPABASE_URL and SUPABASE_KEY:
     except Exception as e:
         print(f"⚠️ فشل الاتصال بـ Supabase Storage: {e}")
 
-# ========== بيانات حساب الأدمن ==========
-ADMIN_EMAIL = "admin@turkishstore.com"
-ADMIN_PASSWORD = "Turk!sh@dm!n2025#Secure"
+# ========== بيانات حساب الأدمن (تم التعديل) ==========
+ADMIN_EMAIL = "admin@alorjwan.com"
+ADMIN_PASSWORD = "Alorjwan@2025"
 ADMIN_PASSWORD_HASH = generate_password_hash(ADMIN_PASSWORD)
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
