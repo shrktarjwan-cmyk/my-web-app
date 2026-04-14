@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>تعديل منتج - متجر المنتجات التركية</title>
+    <title>تعديل منتج - شركة الأرجوان للعبايات</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
     <link href="{{ url_for('static', filename='assets/css/boxicon.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -220,7 +220,7 @@
         <div class="edit-card">
             <div class="edit-header">
                 <h2><i class='bx bx-edit-alt'></i> تعديل المنتج</h2>
-                <p>قم بتحديث معلومات المنتج</p>
+                <p>شركة الأرجوان للعبايات - قم بتحديث معلومات المنتج</p>
             </div>
             
             <div class="edit-body">
@@ -237,7 +237,7 @@
                     <div class="mb-4">
                         <label class="form-label required-field">الفئة</label>
                         <input type="text" name="category" value="{{ p.category or '' }}" class="form-control" required
-                               placeholder="مثال: ملابس، إلكترونيات، مستلزمات منزلية">
+                               placeholder="مثال: عبايات، ملابس، إلكترونيات، مستلزمات منزلية">
                     </div>
                     
                     <!-- السعر -->
@@ -260,7 +260,7 @@
                         <label class="form-label">الصورة الحالية</label>
                         <div class="image-preview">
                             <div class="image-badge">
-                                <img src="https://elxnymtwludcydvnjkth.supabase.co/storage/v1/object/public/products/{{ p.image }}" 
+                                <img src="https://iiwktxwlorknefbkztvt.supabase.co/storage/v1/object/public/products/{{ p.image }}" 
                                      alt="{{ p.name }}" class="current-image">
                                 <button type="button" class="remove-image-btn" onclick="removeCurrentImage()" title="حذف الصورة">
                                     <i class='bx bx-trash'></i>
