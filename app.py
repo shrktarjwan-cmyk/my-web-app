@@ -8,6 +8,7 @@ import json
 from datetime import timedelta, datetime
 import traceback
 import uuid
+from urllib.parse import urlparse  # <-- تمت إضافة هذا السطر الجديد
 
 # محاولة استيراد Supabase (إذا كان مثبتاً)
 try:
@@ -49,10 +50,26 @@ USE_POSTGRES = bool(DATABASE_URL)
 
 print(f"🔍 استخدام PostgreSQL: {USE_POSTGRES}")
 
+# ========== دالة الاتصال بقاعدة البيانات (تم تعديلها) ==========
 def get_db():
     try:
         if USE_POSTGRES:
-            conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+            # تفكيك رابط قاعدة البيانات (DATABASE_URL)
+            result = urlparse(DATABASE_URL)
+            dbname = result.path[1:]
+            user = result.username
+            password = result.password
+            host = result.hostname
+            port = result.port
+            
+            conn = psycopg2.connect(
+                dbname=dbname,
+                user=user,
+                password=password,
+                host=host,
+                port=port,
+                sslmode='require'
+            )
             conn.cursor_factory = RealDictCursor
             return conn
         else:
